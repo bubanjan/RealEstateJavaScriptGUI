@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+    <title>Real Estate</title>
+</head>
+
+<body>
+
+    <div id="CompleteDiv">
+
+        <div id="MenuDiv">
+            <button type="button" id="showButton">Show all estates</button>
+            <button type="button" id="searchBySizeOption">Search by size</button>
+            <button type="button" id="searchByPriceOption">Search by price</button>
+            <button type="button" id="createOption">Create new</button>
+            <button type="button" id="deleteOption">Delete estate</button>
+            <button type="button" id="aboutButton">About application</button>
+
+            <div id="createDiv1">
+                <label>Type</label>
+                <input type="text" id="typeI">
+                <label>Location</label>
+                <input type="text" id="locationI">
+                <label>Description</label>
+                <textarea id="descriptionI"> </textarea>
+                <label>Size</label>
+                <input type="number" id="sizeI">
+                <label>Price</label>
+                <input type="number" id="priceI">
+                <button type="button" id="createNewButton">Add new property</button>
+            </div>
+
+        </div>
+
+
+        <div id="DisplayDataDiv">
+
+            <div id="extraMenu">
+
+                <p id="info">
+                    Welcome to my Real Estate web application. My name is Novak Bubanja.  <br />
+                    I studied Fullstack Developer.NET program on Teknikhögskola in Gothenburg. <br />
+                    We learned : .NET, C#, SQL, Entity Framework, Cloud technologies, Microsoft Azure, <br />
+                    Backend and Frontend programming.<br />
+                    With this project I wanted to practise how to make a web app. I made: <br /><br />
+                    -ASP.NET REST API (published on Azure) <br />
+                    -SQL database (published on Azure) <br />
+                    -HTML, CSS, JavaScript for GUI
+                </p>
+
+                <div id="deleteDiv">
+                    <table id="deleteTable">
+                        <tr>
+                            <th>Please type estate id to delete it</th>               
+                        </tr>
+                        <tr>
+                            <td> <input type="number" name="estateId" id="estateId"></td>
+                        </tr>
+                    </table>
+                    <button type="button" id="deleteButton">Delete</button>
+                </div>
+
+
+                <div id="searchDiv">
+                    <table id="searchT">
+                        <tr>
+                            <th>Min size (m²)</th>
+                            <th>Max size (m²)</th>
+                        </tr>
+                        <tr>
+                            <td> <input type="number" name="minsize" id="minsize"></td>
+                            <td><input type="number" name="maxsize" min="10" step="10" id="maxsize"></td>
+                        </tr>
+                    </table>
+                    <button type="button" id="searchBySizeButton">Search</button>
+                </div>
+
+                <div id="searchByPriceDiv">
+                    <table id="searchP">
+                        <tr>
+                            <th>Min price (EUR)</th>
+                            <th>Max price (EUR)</th>
+                        </tr>
+                        <tr>
+                            <td> <input type="number" name="minprice" id="minprice"></td>
+                            <td><input type="number" name="maxprice" min="10" step="10" id="maxprice"></td>
+                        </tr>
+                    </table>
+                    <button type="button" id="searchByPriceButton">Search</button>
+                </div>
+
+               
+
+            </div>          
+
+            <div id="dataDiv">
+                <table id="dataTable"></table>           
+            </div>
+            
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
