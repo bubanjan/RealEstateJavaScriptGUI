@@ -242,27 +242,27 @@ function generateTable(table, data) {
 }
 
 async function getEstates() {
-    const response = await fetch("https://realestatewebapinovakbubanja.azurewebsites.net/api/estates/");
+    const response = await fetch("https://realestatewebapinb.azurewebsites.net/api/estates/");
     const estates = await response.json();
     return estates;
 }
 
 
 async function getEstatesBySize(a, b) {
-    const response = await fetch("https://realestatewebapinovakbubanja.azurewebsites.net/api/estates/" + a + "," + b);
+    const response = await fetch("https://realestatewebapinb.azurewebsites.net/api/estates/" + a + "," + b);
     const estates = await response.json();
     return estates;
 }
 
 async function getEstatesByPrice(a, b) {
-    const response = await fetch("https://realestatewebapinovakbubanja.azurewebsites.net/api/estates/" + a + "-" + b);
+    const response = await fetch("https://realestatewebapinb.azurewebsites.net/api/estates/" + a + "-" + b);
     const estates = await response.json();
     return estates;
 }
 
 async function deleteEstate(a) {
 
-    fetch('https://realestatewebapinovakbubanja.azurewebsites.net/api/estates/' + a, {
+    fetch('https://realestatewebapinb.azurewebsites.net/api/estates/' + a, {
         method: 'delete',
     })
 
@@ -274,7 +274,7 @@ async function deleteEstate(a) {
 
 async function createData(inpT, inpL, inpD, inpS, inpP) {
 
-    fetch('https://realestatewebapinovakbubanja.azurewebsites.net/api/estates', {
+    fetch('https://realestatewebapinb.azurewebsites.net/api/estates', {
         method: 'post',
         headers: {
             'Accept': 'application/json, text/plain, */*',
