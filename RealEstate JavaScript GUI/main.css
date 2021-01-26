@@ -1,12 +1,9 @@
 
 body {
-    background-color: cadetblue;
-    /*
-        background-image: url("bac6.jpg");
+    /* background-color: cadetblue;*/
+    background-image: url("pic3.png");
     background-repeat: no-repeat;
     background-size: cover;
-
-    */
 }
 
 #createDiv1 {
@@ -15,6 +12,7 @@ body {
     width: 200px;
     align-items: stretch
 }
+
 label {
     /*background-color: rgb(112, 196, 105);
     color: white;
@@ -23,23 +21,22 @@ label {
     color: white;
     margin: 5px 5px;
 }
+
 p {
     color: white;
     margin-left: 10px
 }
+
 #descriptionI {
     height: 120px;
     word-wrap: break-word;
     text-wrap: normal;
     resize: none
-    
 }
 
 #CompleteDiv {
-   
     display: flex;
     flex-direction: row;
-   
 }
 
 #MenuDiv {
@@ -48,7 +45,7 @@ p {
     flex: 1;
     width: 200px;
     margin: 5px 5px;
-    align-content:stretch
+    align-content: stretch
     /* background-color: teal; */
 }
 

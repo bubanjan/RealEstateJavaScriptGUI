@@ -119,7 +119,7 @@ deleteButton.onclick = async event => {
 
     let estates = await getEstates();
     let table = document.querySelector("#dataTable");
-   
+
     let data = Object.keys(estates[0]);
     generateTableHead(table, data);
     generateTable(table, estates);
@@ -133,7 +133,7 @@ aboutButton.onclick = async event => {
     dataDiv.hidden = true;
     deleteDiv.hidden = true;
     info.hidden = false;
- 
+
 };
 
 searchBySizeOption.onclick = async event => {
@@ -242,27 +242,27 @@ function generateTable(table, data) {
 }
 
 async function getEstates() {
-    const response = await fetch("https://realestatewebapinb.azurewebsites.net/api/estates/");
+    const response = await fetch("https://realestatewebapi.azurewebsites.net/api/estates/");
     const estates = await response.json();
     return estates;
 }
 
 
 async function getEstatesBySize(a, b) {
-    const response = await fetch("https://realestatewebapinb.azurewebsites.net/api/estates/" + a + "," + b);
+    const response = await fetch("https://realestatewebapi.azurewebsites.net/api/estates/" + a + "," + b);
     const estates = await response.json();
     return estates;
 }
 
 async function getEstatesByPrice(a, b) {
-    const response = await fetch("https://realestatewebapinb.azurewebsites.net/api/estates/" + a + "-" + b);
+    const response = await fetch("https://realestatewebapi.azurewebsites.net/api/estates/" + a + "-" + b);
     const estates = await response.json();
     return estates;
 }
 
 async function deleteEstate(a) {
 
-    fetch('https://realestatewebapinb.azurewebsites.net/api/estates/' + a, {
+    fetch('https://realestatewebapi.azurewebsites.net/api/estates/' + a, {
         method: 'delete',
     })
 
@@ -274,7 +274,7 @@ async function deleteEstate(a) {
 
 async function createData(inpT, inpL, inpD, inpS, inpP) {
 
-    fetch('https://realestatewebapinb.azurewebsites.net/api/estates', {
+    fetch('https://realestatewebapi.azurewebsites.net/api/estates', {
         method: 'post',
         headers: {
             'Accept': 'application/json, text/plain, */*',
